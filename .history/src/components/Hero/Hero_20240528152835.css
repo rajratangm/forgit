@@ -1,0 +1,82 @@
+/* Hero.css
+.hero-container {
+    width: 100%;
+  }
+  
+  .hero-content {
+    width: 100%;
+  }
+   */
+
+
+   .hero-container {
+    position: relative;
+    display: flex;
+    padding: 0 88.5px;
+    background-color: #0C0C0C;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.background-image1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 410px;
+    background-image: url('../assets/images/image_75.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 71.7px 30.4px 71.7px 0;
+    box-sizing: border-box;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+.hero-text-line {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 35.9px;
+    line-height: 1.504;
+    color: #FFFFFF;
+    word-break: break-word;
+}
+
+.hero-text-line:not(:last-child) {
+    margin-right: 42.1px;
+}
+
+.hero-button {
+    background: linear-gradient(90deg, #333333, #232323, #191919, #000000);
+    padding: 16px 24px;
+    width: 320px;
+    height: 64.7px;
+    box-sizing: border-box;
+}
+
+.button-image {
+    background-image: url('../assets/images/image_65.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 32.

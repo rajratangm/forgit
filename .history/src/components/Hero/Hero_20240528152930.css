@@ -1,0 +1,109 @@
+/* Hero.css
+.hero-container {
+    width: 100%;
+  }
+  
+  .hero-content {
+    width: 100%;
+  }
+   */
+
+
+   .hero-container {
+    background-color: #0C0C0C;
+    position: relative;
+    display: flex;
+    padding: 0 88.5px;
+    box-sizing: border-box;
+  }
+  
+  .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  
+  .hero-background {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 410px;
+    overflow-x: hidden;
+  }
+  
+  .hero-text-container {
+    margin: 71.7px 30.4px 71.7px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .hero-text {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  
+  .hero-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 35.9px;
+    line-height: 1.504;
+    color: #FFFFFF;
+    word-break: break-word;
+  }
+  
+  .hero-gradient-button {
+    background: linear-gradient(90deg, #333333, #232323, #191919, #000000);
+    align-self: flex-start;
+    padding: 16px 24px;
+    width: 320px;
+    height: 64.7px;
+    box-sizing: border-box;
+  }
+  
+  .hero-gradient-image {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 32.7px;
+  }
+  
+  .hero-right-section {
+    background-color: #0C0C0C;
+    position: relative;
+    display: flex;
+    padding: 87.2px 0 32px 0;
+    width: 728px;
+    height: 410px;
+    box-sizing: border-box;
+  }
+  
+  .hero-main-image {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 580px;
+    height: 290.8px;
+  }
+  
+  .hero-small-image {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 440px;
+    height: 91.3px;
+  }
+  

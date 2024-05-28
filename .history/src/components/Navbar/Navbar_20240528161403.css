@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 88.5px;
+}
+
+.navbar .logo img {
+    margin-right: 0;
+}
+
+.navbar .company-name {
+    margin-left: 0;
+    color: color(rec2020 rgb(20, 18, 18) green blue);
+    font-size: 18px;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-right: 20px;
+}
+
+.navbar .nav-links li:last-child {
+    margin-right: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: black;
+        color:white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+    }
+
+    .navbar .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar .logo img {
+        margin-right: 0;
+    }
+
+    .navbar .company-name {
+        margin: 5.5px 0;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

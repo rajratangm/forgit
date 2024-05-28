@@ -51,7 +51,9 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth';
+// const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://koi-2p2q.onrender.com/api/auth';
+
 
 export const register = async ({ name, email, password }) => {
   try {

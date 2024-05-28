@@ -39,7 +39,7 @@ function App() {
       {/* <AwardSection recognitions= {recognitions} /> */}
       {/* <Hero2/> */}
       <Label/>
-      {/* <Form/> */}
+      <Form/>
       <CorosDisplay/>
       <ACorosel />
       

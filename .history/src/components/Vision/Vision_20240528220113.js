@@ -17,7 +17,7 @@ import './Vision.css'; // Import the CSS file for Vision styles
 
 const Vision = () => {
   return (
-    <div className="vision-container" id='integration'>
+    <div className="vision-container" id='in'>
       <div className="bg-[#02304F] flex flex-col items-center p-[45.1px_0_48px_0] w-full box-sizing-border">
         <p className="m-[0_6.5px_6.2px_0] break-words font-['Inter'] font-medium text-[24.6px] leading-[1.171] uppercase text-[#20B0E7]">
           <span className="koi-connect-enterprise-integration-layer-sub-0">KOI</span>

@@ -131,6 +131,7 @@
 //----------------------------------------------------------------------------------------
 
 
+
 import React, { useState } from 'react';
 import './Form.css';
 import image2 from '../../assets/images/vector_14_x2.svg';
@@ -151,10 +152,6 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (!password) {
-        throw new Error('Password is required');
-      }
-
       let response;
       if (isRegister) {
         response = await register({ name, email, password });
@@ -165,12 +162,10 @@ const Form = () => {
       }
       console.log(response);
     } catch (error) {
-      if (error.response && error.response.status === 409) {
+      if (error && error.response && error.response.status === 409) {
         toast.error('User already exists!');
-      } else if (error.response && error.response.status === 401) {
+      } else if (error && error.response && error.response.status === 401) {
         toast.error('Incorrect email or password!');
-      } else if (error.message) {
-        toast.error(error.message);
       } else {
         console.error('Error:', error);
       }
@@ -179,7 +174,7 @@ const Form = () => {
 
   return (
     <>
-      <form id='form' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="bg-dark relative p-custom w-custom box-sizing-border">
           <div className="bg-image absolute center-x top-0 w-image h-image"></div>
           <div className="relative flex flex-row justify-between w-content h-fit-content box-sizing-border">

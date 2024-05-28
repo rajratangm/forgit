@@ -179,7 +179,7 @@ const Form = () => {
 
   return (
     <>
-      <form id='form' onSubmit={handleSubmit}>
+      <form id='' onSubmit={handleSubmit}>
         <div className="bg-dark relative p-custom w-custom box-sizing-border">
           <div className="bg-image absolute center-x top-0 w-image h-image"></div>
           <div className="relative flex flex-row justify-between w-content h-fit-content box-sizing-border">

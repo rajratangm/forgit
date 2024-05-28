@@ -114,7 +114,7 @@
     line-height: 1.534;
   }
   .text-subtitle-color {
-    color: #CCCECE;
+    color: red;
   }
   .w-large-icon {
     width: 24px;
@@ -182,13 +182,4 @@
 
 .justify-between {
   justify-content: flex-start; 
-}
-
-
-/* Update input box color and text color */
-.bg-secondary input[type="text"],
-.bg-secondary input[type="email"],
-.bg-secondary input[type="password"] {
-  background-color: #262525; /* Dark background color */
-  color: #FFFFFF; /* White text color */
 }

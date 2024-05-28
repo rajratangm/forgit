@@ -1,4 +1,4 @@
-.bg-dark {
+/* .bg-dark {
     background-color: #111111;
   }
   .relative {
@@ -184,11 +184,4 @@
   justify-content: flex-start; 
 }
 
-
-/* Update input box color and text color */
-.bg-secondary input[type="text"],
-.bg-secondary input[type="email"],
-.bg-secondary input[type="password"] {
-  background-color: #262525; /* Dark background color */
-  color: #FFFFFF; /* White text color */
-}
+ */

@@ -1,4 +1,4 @@
-.bg-dark {
+/* .bg-dark {
     background-color: #111111;
   }
   .relative {
@@ -169,26 +169,17 @@
   }
   
 
-
+  /* Form.css */
 
 .bg-dark {
-  width: 100%; 
+  width: 100%; /* Ensure the form takes up the full width of its container */
 }
 
 .relative {
-  width: 100%; 
+  width: 100%; /* Ensure the relative positioning takes up the full width */
 }
 
-
+/* Add any other necessary styles here */
 .justify-between {
-  justify-content: flex-start; 
-}
-
-
-/* Update input box color and text color */
-.bg-secondary input[type="text"],
-.bg-secondary input[type="email"],
-.bg-secondary input[type="password"] {
-  background-color: #262525; /* Dark background color */
-  color: #FFFFFF; /* White text color */
-}
+  justify-content: flex-start; /* Align items towards the start (left) */
+} */

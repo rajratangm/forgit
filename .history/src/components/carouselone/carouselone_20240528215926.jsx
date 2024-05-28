@@ -48,7 +48,7 @@ const SlideShow = () => {
   };
 
   return (
-    <div id ='slider' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#000000', padding: '20px' }}>
+    <div id ='' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#000000', padding: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <button style={buttonStyle} onClick={() => handleClick(1)}>Smart Yard</button>
         <button style={buttonStyle} onClick={() => handleClick(2)}>Slide 2</button>

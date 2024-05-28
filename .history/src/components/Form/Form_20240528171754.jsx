@@ -120,17 +120,6 @@
 // export default Form;
 
 
-
-
-
-
-
-
-
-
-//----------------------------------------------------------------------------------------
-
-
 import React, { useState } from 'react';
 import './Form.css';
 import image2 from '../../assets/images/vector_14_x2.svg';
@@ -151,117 +140,109 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (!password) {
-        throw new Error('Password is required');
-      }
-
-      let response;
       if (isRegister) {
-        response = await register({ name, email, password });
+        const response = await register({ name, email, password });
         toast.success('Registration Successful!');
+        console.log(response);
       } else {
-        response = await login({ email, password });
+        const response = await login({ email, password });
         toast.success('Login Successful!');
+        console.log(response);
       }
-      console.log(response);
     } catch (error) {
-      if (error.response && error.response.status === 409) {
+      if (error.response.status === 409) {
         toast.error('User already exists!');
-      } else if (error.response && error.response.status === 401) {
+      } else if (error.response.status === 401) {
         toast.error('Incorrect email or password!');
-      } else if (error.message) {
-        toast.error(error.message);
       } else {
-        console.error('Error:', error);
+        console.error(error);
       }
     }
   };
 
   return (
-    <>
-      <form id='form' onSubmit={handleSubmit}>
-        <div className="bg-dark relative p-custom w-custom box-sizing-border">
-          <div className="bg-image absolute center-x top-0 w-image h-image"></div>
-          <div className="relative flex flex-row justify-between w-content h-fit-content box-sizing-border">
-            <div className=" m-margin-vertical w-bar h-bar"></div>
-            <span className="break-words font-inter font-semibold text-title tracking-title leading-title uppercase text-white">
-              Optimize your operations with AI
-            </span>
+    <form onSubmit={handleSubmit}>
+      <div className="bg-dark relative p-custom w-custom box-sizing-border">
+        <div className="bg-image absolute center-x top-0 w-image h-image"></div>
+        <div className="relative flex flex-row justify-between w-content h-fit-content box-sizing-border">
+          <div className=" m-margin-vertical w-bar h-bar"></div>
+          <span className="break-words font-inter font-semibold text-title tracking-title leading-title uppercase text-white">
+            Optimize your operations with AI
+          </span>
+        </div>
+        <div className="absolute right-custom bottom-custom flex flex-col items-center box-sizing-border">
+          {isRegister && (
+            <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
+              <div className="m-icon-margin flex w-icon h-icon box-sizing-border">
+                <img className="w-icon h-icon" src={image2} alt="icon" />
+              </div>
+              <div className="flex box-sizing-border">
+                <input
+                  type="text"
+                  className="break-words font-inter font-light text-subtitle tracking-subtitle leading-subtitle text-subtitle-color"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+          )}
+          <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
+            <img className="m-icon-margin flex w-large-icon h-large-icon" src={image1} alt="icon" />
+            <div className="flex box-sizing-border">
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
           </div>
-          <div className="absolute right-custom bottom-custom flex flex-col items-center box-sizing-border">
-            {isRegister && (
-              <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
-                <div className="m-icon-margin flex w-icon h-icon box-sizing-border">
-                  <img className="w-icon h-icon" src={image2} alt="icon" />
-                </div>
-                <div className="flex box-sizing-border">
-                  <input
-                    type="text"
-                    className="break-words font-inter font-light text-subtitle tracking-subtitle leading-subtitle text-subtitle-color"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-            )}
-            <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
-              <img className="m-icon-margin flex w-large-icon h-large-icon" src={image1} alt="icon" />
-              <div className="flex box-sizing-border">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+          <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
+            <div className="m-icon-margin flex w-small-icon h-small-icon box-sizing-border">
+              <img className="w-small-icon h-small-icon" src={image3} alt="icon" />
             </div>
-            <div className="bg-secondary m-bottom flex flex-row p-padding w-box box-sizing-border">
-              <div className="m-icon-margin flex w-small-icon h-small-icon box-sizing-border">
-                <img className="w-small-icon h-small-icon" src={image3} alt="icon" />
+            <div className="flex box-sizing-border">
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+          </div>
+          {!isRegister && (
+            <div className="bg-secondary m-bottom-large flex flex-row p-padding w-box box-sizing-border">
+              <div className="m-icon-margin flex w-icon h-icon box-sizing-border">
+                <img className="w-icon h-icon" src={image4} alt="icon" />
               </div>
               <div className="flex box-sizing-border">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+                <span className="break-words font-inter font-light text-subtitle tracking-subtitle leading-subtitle text-subtitle-color">
+                  Phone
+                </span>
               </div>
             </div>
-            {!isRegister && (
-              <div className="bg-secondary m-bottom-large flex flex-row p-padding w-box box-sizing-border">
-                <div className="m-icon-margin flex w-icon h-icon box-sizing-border">
-                  <img className="w-icon h-icon" src={image4} alt="icon" />
-                </div>
-                <div className="flex box-sizing-border">
-                  <span className="break-words font-inter font-light text-subtitle tracking-subtitle leading-subtitle text-subtitle-color">
-                    Phone
-                  </span>
-                </div>
-              </div>
-            )}
-            <div className="rounded-custom bg-dark-secondary flex flex-row justify-between p-button w-button box-sizing-border">
-              <button type="submit" className="m-button-margin w-button-text break-words font-inter font-semibold text-button tracking-button leading-button uppercase text-white">
-                {isRegister ? 'Register' : 'Login'}
-              </button>
-              <div className="m-arrow-margin flex w-arrow h-arrow box-sizing-border">
-                <img className="w-arrow h-arrow" src={image5} alt="arrow" />
-              </div>
+          )}
+          <div className="rounded-custom bg-dark-secondary flex flex-row justify-between p-button w-button box-sizing-border">
+            <button type="submit" className="m-button-margin w-button-text break-words font-inter font-semibold text-button tracking-button leading-button uppercase text-white">
+              {isRegister ? 'Register' : 'Login'}
+            </button>
+            <div className="m-arrow-margin flex w-arrow h-arrow box-sizing-border">
+              <img className="w-arrow h-arrow" src={image5} alt="arrow" />
             </div>
-            <div className="flex mt-4">
-              <button type="button" className="text-white" onClick={() => setIsRegister(!isRegister)}>
-                {isRegister ? 'Already have an account? Login' : 'Don\'t have an account? Register'}
-              </button>
-            </div>
+          </div>
+          <div className="flex mt-4">
+            <button type="button" className="text-white" onClick={() => setIsRegister(!isRegister)}>
+              {isRegister ? 'Already have an account? Login' : 'Don\'t have an account? Register'}
+            </button>
           </div>
         </div>
-      </form>
+      </div>
       <ToastContainer />
-    </>
+    </form>
   );
 };
 

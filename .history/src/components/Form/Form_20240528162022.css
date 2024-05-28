@@ -1,4 +1,4 @@
-.bg-dark {
+/* .bg-dark {
     background-color: #111111;
   }
   .relative {
@@ -182,13 +182,96 @@
 
 .justify-between {
   justify-content: flex-start; 
-}
+} */
 
 
-/* Update input box color and text color */
-.bg-secondary input[type="text"],
-.bg-secondary input[type="email"],
-.bg-secondary input[type="password"] {
-  background-color: #262525; /* Dark background color */
-  color: #FFFFFF; /* White text color */
+/* Form.css */
+
+/* Base styles */
+.bg-dark {
+  background-color: #111111;
+  width: 100%; /* Ensure the form takes up the full width of its container */
 }
+
+.relative {
+  position: relative;
+  width: 100%; /* Ensure the relative positioning takes up the full width */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Section separators */
+.section-divider {
+  margin: 24px 0; /* Adjust as needed */
+}
+
+/* Input styles */
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px; /* Adjust icon position */
+}
+
+.input-field {
+  width: calc(100% - 30px); /* Adjust to accommodate icon */
+  padding-left: 30px; /* Ensure space for icon */
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 17.6px;
+  letter-spacing: 1px;
+  line-height: 1.534;
+  color: #CCCECE;
+  background-color: #202123;
+  border-radius: 4px;
+  border: none;
+  padding: 13px;
+}
+
+/* Button styles */
+.button-container {
+  position: relative;
+}
+
+.button-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18.4px;
+  letter-spacing: 3px;
+  line-height: 1.467;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #262525;
+  border-radius: 4px;
+  border: none;
+  padding: 13px 23.3px 14px 0;
+}
+
+.button-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Adjust arrow position */
+}
+
+/* Text link styles */
+.text-link {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Add any other necessary styles here */

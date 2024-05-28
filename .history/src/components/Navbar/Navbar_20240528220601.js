@@ -13,8 +13,8 @@ const Navbar = () => {
                 <li><a href="#integration">Integration</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="https://koivision.substack.com/">Blog</a></li>
-                <li><a href="#form">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     );

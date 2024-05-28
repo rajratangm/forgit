@@ -1,4 +1,4 @@
-.bg-dark {
+/* .bg-dark {
     background-color: #111111;
   }
   .relative {
@@ -185,10 +185,78 @@
 }
 
 
-/* Update input box color and text color */
-.bg-secondary input[type="text"],
-.bg-secondary input[type="email"],
-.bg-secondary input[type="password"] {
-  background-color: #262525; /* Dark background color */
-  color: #FFFFFF; /* White text color */
+Form.css */
+
+/* Base styles */
+.bg-dark {
+  background-color: #111111;
+  width: 100%; /* Ensure the form takes up the full width of its container */
 }
+
+.relative {
+  position: relative;
+  width: 100%; /* Ensure the relative positioning takes up the full width */
+}
+
+/* Input section styles */
+.input-section {
+  background-color: #202123; /* Set the background color for the input section */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 4px; /* Optional: add some border radius for visual appeal */
+}
+
+/* Input field styles */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #CCCECE;
+  background-color: transparent; /* Set transparent background */
+  border: 1px solid #333; /* Optional: add border for better visibility */
+  border-radius: 4px; /* Optional: add border radius for visual appeal */
+}
+
+.input-field::placeholder {
+  color: #CCCECE; /* Set placeholder color */
+}
+
+.input-field:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #2FAFBF; /* Optional: change border color on focus */
+}
+
+/* Button styles */
+.button-container {
+  position: relative;
+}
+
+.button-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18.4px;
+  letter-spacing: 3px;
+  line-height: 1.467;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #262525;
+  border-radius: 4px;
+  border: none;
+  padding: 13px 23.3px 14px 0;
+}
+
+.button-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Adjust arrow position */
+}
+
+/* Text link styles */
+.text-link {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Add any other necessary styles here */

@@ -56,7 +56,7 @@ const CorosDisplay = () => {
   };
 
   return (
-    <div id = 'awards'className="relative flex flex-row box-sizing-border bg-gray-900 text-white">
+    <div id = 'award'className="relative flex flex-row box-sizing-border bg-gray-900 text-white">
       <div className="w-[180px] h-[740.6px]" style={{ backgroundImage: `url(${image45})`, backgroundPosition: '50% 50%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}></div>
       <div className="flex flex-col ml-8 mt-4">
         <div className="flex flex-row justify-around">

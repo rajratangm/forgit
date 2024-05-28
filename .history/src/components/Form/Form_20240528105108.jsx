@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import './Form.css';
 import image2 from '../../assets/images/vector_14_x2.svg';
@@ -18,17 +19,16 @@ const Form = () => {
     e.preventDefault();
     try {
       if (isRegister) {
-        const response = await register({ name, email, password });
+        const response = await register(name, email, password);
         console.log(response);
       } else {
-        const response = await login({ email, password });
+        const response = await login(email, password);
         console.log(response);
       }
     } catch (error) {
       console.error(error);
     }
   };
-  
 
   return (
     <form onSubmit={handleSubmit}>

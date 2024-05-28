@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import './Form.css';
 import image2 from '../../assets/images/vector_14_x2.svg';
@@ -6,7 +7,7 @@ import image1 from '../../assets/images/icon_10_x2.svg';
 import image3 from '../../assets/images/vector_41_x2.svg';
 import image4 from '../../assets/images/vector_20_x2.svg';
 import image5 from '../../assets/images/vector_26_x2.svg';
-import { register, login } from '../../services/authService';
+import { register, login } from '../../';
 
 const Form = () => {
   const [name, setName] = useState('');

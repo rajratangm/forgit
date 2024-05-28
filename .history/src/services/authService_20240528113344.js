@@ -1,3 +1,6 @@
+
+
+
 const API_URL = 'https://koi-2p2q.onrender.com/api/auth';
 
 export const register = async ({ name, email, password }) => {
